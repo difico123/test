@@ -1,23 +1,23 @@
 module.exports = function (height, old) {
-
-    const invalidation = "Không hợp lệ"
-    const withhold = "Không được vào"
+ let a = "Không hợp lệ"
+ let b = "Không được vào"
+ let c = "Hồ lớn"
+ let d = "Hồ bé"
+ let e = "25k"
+ let f = "30k"
     if (height <= 0 || old <= 0) {
-        return invalidation
+        return a
     }
-    if (old > 60) {
-        return withhold
+   if (old > 60) {
+        return b
+   } else if (old >= 16) {
+        return c + " và " + f
+    } else {
+    	if (height > 150) {
+       		return c + " và " + e
+    	} else {
+       	    return d + " và " + e
+    	}
     }
-    const fee25 = "vé 25k"
-    const fee30 = "vé 30k"
-    const largePool = "Hồ lớn"
-    const smallPool = "Hồ bé"
-    let result = "";
-
-    if (old >= 16) {
-        result = height > 150 ? `${largePool} và ${fee30}` : `${smallPool} và ${fee30}`
-        return result;
-    }
-    result = height > 150 ? `${largePool} và ${fee25}` : `${smallPool} và ${fee25}`
-    return result;
 }
+
