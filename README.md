@@ -2,7 +2,7 @@
 
 Các bước cài đặt project
 
-Bước 1: clone project git clone 
+Bước 1: clone project `git clone https://github.com/difico123/test.git`
 
 Bước 2: `cd test` và gõ npm install trên terminal
 
